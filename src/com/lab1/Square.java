@@ -4,10 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Square {
-    double sideLenght;
+    double sideLength;
     public  Square() {
     }
-    public  Square(double sideLenght) {this.sideLenght = sideLenght;}
+    public  Square(double sideLength) {this.sideLength = sideLength;}
     public static double checkSides(String value){
         double side = -1;
         try {
@@ -18,37 +18,37 @@ public class Square {
         return side;
     }
 
-    public double getSideLenght() {
-        return sideLenght;
+    public double getSideLength() {
+        return sideLength;
     }
 
-    public void setSideLenght(double sideLenght) {
-        this.sideLenght = sideLenght > 0 ? sideLenght : -1;
+    public void setSideLength(double sideLength) {
+        this.sideLength = sideLength > 0 ? sideLength : -1;
     }
 
     public double getPerimetr() {
-        return this.sideLenght*4;
+        return this.sideLength*4;
     }
 
 
     public double getArea() {
-        return this.sideLenght*this.sideLenght;
+        return this.sideLength*this.sideLength;
     }
 
 
     public double getDiagon() {
-        return Math.sqrt(2)*this.sideLenght;
+        return Math.sqrt(2)*this.sideLength;
     }
 
 
     @Override
     public String toString() {
-        return this.sideLenght>0 ?
-         String.format("Square:" +
-                "\nside =" + String.format("%6.2f",this.sideLenght) +
-                "\nperimetr =" + String.format("%6.2f",getPerimetr()) +
-                "\narea =" + String.format("%6.2f",getArea()) +
-                "\ndiagonal =" + String.format("%6.2f",getDiagon())
-                ): "Error: side = " + this.sideLenght;
+        return this.sideLength>0 ?
+         String.format("Square{" +
+                " side =" + String.format("%6.2f",this.sideLength) +
+                " perimetr =" + String.format("%6.2f",getPerimetr()) +
+                " area =" + String.format("%6.2f",getArea()) +
+                " diagonal =" + String.format("%6.2f",getDiagon())+
+                '}'): "Error: side = " + this.sideLength;
     }
 }

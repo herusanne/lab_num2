@@ -35,13 +35,17 @@ import java.util.Arrays;
             }
             squares = tempSquares;
         }
-        public double getAverage()
+        public double getMax()
         {
-            double area = 0;
+            int maxIndex = 0;
+            double max = 0;
             for (int i = 0; i < squares.length; i++) {
-                area+=squares[i].getArea();
+                if (squares[i].getArea() > max) {
+                    max = squares[i].getArea();
+                    maxIndex = i;
+                }
             }
-            return area/squares.length;
+            return max;
         }
         private Square[] squares;
         public Squares() {

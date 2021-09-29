@@ -3,8 +3,8 @@ package com.lab1;
 public class RightSquarePrism extends Square{
     private double height;
 
-    public  RightSquarePrism(double sideLenght,double height){
-    super(sideLenght);
+    public  RightSquarePrism(double sideLength,double height){
+    super(sideLength);
     setHeight(height);
     }
 
@@ -27,7 +27,7 @@ public class RightSquarePrism extends Square{
 */
 @Override
 public String toString() {
-    return "Prism{" + "side = " + getSideLenght()
+    return "Prism{" + "side = " + getSideLength()
             + ", height=" + height + ", capacity = " + this.getCapacity()+'}';
 }
 
