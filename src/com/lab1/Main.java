@@ -12,7 +12,7 @@ public class Main {
         Square square;
         double side = -1;
         while (Square.checkSides("" + (side = Math.random() * 11 - 5)) < 0) {
-            System.out.println(side);
+           // System.out.println(side);
         }
         square = new Square(side);
         Squares squares = new Squares(5);
@@ -47,5 +47,10 @@ public class Main {
         for (int i = 0; i < prismas.list.size(); i++)
             System.out.println(prismas.list.get(i));
 
+        System.out.println("\nPrism with max diagonal:" + String.format("%6.2f",prismas.getMaxDiagon()));
+        for (int i = 0; i < prismas.list.size(); i++) {
+            if (prismas.list.get(i).getDiagon() == prismas.getMaxDiagon())
+                System.out.println(prismas.list.get(i));
+        }
     }
 }
