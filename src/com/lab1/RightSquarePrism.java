@@ -1,37 +1,34 @@
 package com.lab1;
 
 public class RightSquarePrism extends Square{
-    int height;
-    int capacity;
+    private double height;
 
-
-    public  RightSquarePrism(int sideLenght){
+    public  RightSquarePrism(double sideLenght,double height){
     super(sideLenght);
-    this.setHeight(height);
-    this.setCapacity(capacity);
+    setHeight(height);
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height > 0 ? height : -1;
     }
-    public int getCapacity() {
-        return capacity;
-    }
-    public void setCapacity(int capacity) {
-        this.capacity = area*this.height;
+    public double getCapacity() {
+        return super.getArea()*getHeight();
     }
 
+/*
     @Override
     public void move(Square side) {
         super.move(side);
         System.out.println(this.getClass().getSimpleName());
     }
+*/
+@Override
+public String toString() {
+    return "Prism{" + "side = " + getSideLenght()
+            + ", height=" + height + ", capacity = " + this.getCapacity()+'}';
+}
 
-    @Override
-    public String toString() {
-        return "RightSquarePrism{" + "capacity=" + capacity + '}';
-    }
 }
