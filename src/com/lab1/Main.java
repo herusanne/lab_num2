@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner= new Scanner(System.in);
         Square square;
         double side = -1;
-        while (Square.checkSides("" + (side = Math.random() * 11 - 5)) < 0) {
+        while (Square.checkSides((side = Math.random() * 11 - 5)) < 0) {
            // System.out.println(side);
         }
         square = new Square(side);

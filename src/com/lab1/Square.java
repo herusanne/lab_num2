@@ -8,14 +8,9 @@ public class Square {
     public  Square() {
     }
     public  Square(double sideLength) {this.sideLength = sideLength;}
-    public static double checkSides(String value){
-        double side = -1;
-        try {
-            side = Double.parseDouble(value) > 0 ? Double.parseDouble(value) : -1;
-        } catch (Exception e) {
 
-        }
-        return side;
+    public static double checkSides(double value){
+        return (value) > 0 ? (value) : -1;
     }
 
     public double getSideLength() {
